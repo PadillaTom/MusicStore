@@ -6,7 +6,9 @@ const Error = () => {
     <section className='section error-sect'>
       <div className='error-container'>
         <h2>There is no such page.</h2>
-        <button className='btn-primary'>Back to Home</button>
+        <Link to='/'>
+          <button className='btn-primary'>Back to Home</button>
+        </Link>
       </div>
     </section>
   );

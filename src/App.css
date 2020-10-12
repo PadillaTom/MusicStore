@@ -142,12 +142,12 @@ a {
   transition: var(--MainTransition);
 }
 .cart-bag {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 }
 .bag-amount {
   position: absolute;
   font-family: var(--CtaFonts);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   top: 50%;
   left: 50%;
