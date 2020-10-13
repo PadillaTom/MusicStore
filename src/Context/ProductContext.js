@@ -5,6 +5,7 @@ export const ProductContext = React.createContext();
 
 export default function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
+
   // Request Data
   useEffect(() => {
     db.collection('products').onSnapshot((snapshot) =>
@@ -12,6 +13,8 @@ export default function ProductProvider({ children }) {
     );
   }, []);
   return (
-    <ProductContext.Provider value='Hi'>{children}</ProductContext.Provider>
+    <ProductContext.Provider value={{ products }}>
+      {children}
+    </ProductContext.Provider>
   );
 }

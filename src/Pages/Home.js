@@ -1,13 +1,13 @@
 import React from 'react';
 // Components:
 import Banner from '../Components/Banner';
-import PromoProductsCard from '../Components/PromoProductsCard';
+import PromoProducts from '../Components/PromoProducts';
 
 const Home = () => {
   return (
     <section className='section'>
       <Banner></Banner>
-      <PromoProductsCard></PromoProductsCard>
+      <PromoProducts></PromoProducts>
     </section>
   );
 };

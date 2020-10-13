@@ -63,7 +63,7 @@ a {
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 :root {
   /* Colors */
-  --BgColor: rgb(255, 255, 255);
+  --BgColor: rgb(248, 248, 248);
   --GrayColor: #323232;
   --FontGrayColor: #686868;
   --ArticleBgColor: rgb(242, 242, 242);
@@ -163,6 +163,7 @@ a {
   display: flex;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 .banner-img-container {
   /*Article*/
@@ -236,8 +237,53 @@ a {
 }
 /* End Banner Slider */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Loading ::::::::::::::::::::: */
+.loading {
+  font-weight: 2rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+/* End Loading */
+
+/* ::::::::::::::::::: Promoted Card ::::::::::::::::::::: */
+.promo-card {
+  width: 95%;
+  height: 25rem;
+  margin: 0 auto;
+  background: white;
+  margin-bottom: 1rem;
+}
+.promo-img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+.promo-info {
+  width: 95%;
+  margin: 0 auto;
+}
+.promo-subtitle {
+  color: var(--GrayColor);
+  font-family: var(--CtaFonts);
+  letter-spacing: 1.3px;
+  font-weight: 300;
+}
+.promo-title {
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  font-family: var(--TitleFont);
+  font-weight: 400;
+}
+.cta-promo {
+  color: var(--FontGrayColor);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+  transition: var(--MainTransition);
+}
+.cta-promo:hover {
+  color: #1a1a1a;
+}
+/* End Promoted Card */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
@@ -254,8 +300,81 @@ a {
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Footer ::::::::::::::::::::: */
+.footer-sect {
+  background-color: var(--GrayColor);
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0rem;
+}
+.footer-light {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-social-icons {
+  color: white;
+  font-weight: 300;
+  font-family: var(--TextsFont);
+  letter-spacing: 1.2px;
+  margin-bottom: 2rem;
+}
+.footer-social-icons h4 {
+  margin-bottom: 0.5rem;
+  font-family: var(--CtaFonts);
+  font-size: 1.3rem;
+}
+.social-name {
+  display: flex;
+  cursor: pointer;
+}
+.social-name p {
+  margin-left: 0.5rem;
+}
+.legal-notices {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  letter-spacing: 1.3px;
+  margin-bottom: 2rem;
+}
+.single-legal {
+  cursor: pointer;
+}
+.legal-notices h4 {
+  margin-bottom: 0.5rem;
+  font-family: var(--CtaFonts);
+  font-size: 1.3rem;
+}
+.contact-footer {
+  color: white;
+  font-weight: 300;
+  font-family: var(--TextsFont);
+  letter-spacing: 1.2px;
+  margin-bottom: 0.2rem;
+}
+.contact-single-footer {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.contact-single-footer p {
+  margin-left: 0.5rem;
+}
+.footer-dark-sect {
+  background-color: var(--CtaColor);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-dark {
+  height: 3rem;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* End Footer */

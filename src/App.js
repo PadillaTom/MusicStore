@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Error from './Pages/Error';
 // Components:
 import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Error></Error>
         </Route>
       </Switch>
+      <Footer></Footer>
     </Router>
   );
 }
