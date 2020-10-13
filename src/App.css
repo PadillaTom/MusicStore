@@ -40,7 +40,7 @@ a {
 }
 .section-title {
   margin-top: 1.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   text-align: center;
   text-transform: capitalize;
   font-size: 1.5rem;
@@ -287,26 +287,61 @@ a {
 
 /* ::::::::::::::::::: Artist Card ::::::::::::::::::::: */
 .artists-card-sect {
-  height: 50vh;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  min-height: 50vh;
 }
 .artist-card {
-  position: absolute;
-  top: 0;
-  left: 0;
   transition: var(--MainTransition);
   width: 100%;
   height: 100%;
-  opacity: 0;
+  background: white;
+  margin-bottom: 3rem;
 }
-.artist-img {
+.artist-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+.artist-card-info {
+  width: 95%;
+  margin: 0 auto;
+  color: var(--GrayColor);
+  background-color: white;
+  padding: 0.5rem 0rem;
+}
+.artist-card-info h2 {
+  font-family: var(--CtaFonts);
+  letter-spacing: 1.3px;
+}
+.artist-card-info p {
+  max-width: 91%;
+  padding: 0.3rem 0rem;
+  letter-spacing: 1.1px;
+}
+.btn-artist-card {
+  cursor: pointer;
+  transition: var(--MainTransition);
+  font-size: 0.8rem;
+}
+.btn-artist-card:hover {
+  color: black;
+}
+/* Card Selectors */
+.card-article-selector {
+  margin: 0 auto;
+  margin-top: 1rem;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.single-selector {
+  width: 2.5rem;
+  background-color: #a3a3a3;
+  height: 0.15rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+/* End Cart Selectors */
 /* End Artist Card */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
