@@ -4,6 +4,7 @@ import React from 'react';
 import Banner from '../Components/Banner';
 import PromoProducts from '../Components/PromoProducts';
 import ArtistsCardHome from '../Components/ArtistsCardHome';
+import Newsletter from '../Components/Newsletter';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Banner></Banner>
       <PromoProducts></PromoProducts>
       <ArtistsCardHome></ArtistsCardHome>
+      <Newsletter></Newsletter>
     </section>
   );
 };
