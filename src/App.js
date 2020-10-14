@@ -11,7 +11,7 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import LoginPage from './Pages/LoginPage';
 import CartPage from './Pages/CartPage';
-import InsturmentsPage from './Pages/InstrumentsPage';
+import InstrumentsPage from './Pages/InstrumentsPage';
 
 // Components:
 import Navbar from './Components/Navbar';

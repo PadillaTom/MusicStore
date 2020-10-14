@@ -11,11 +11,11 @@ const PromoProducts = () => {
   // Main:
   return (
     <React.Fragment>
-      {promo.map(({ id, imageUrl, title, subtitle, price }) => (
+      {promo.map(({ id, imageUrl, subtitle, price, hctitle }) => (
         <PromoCard
           key={id}
           imageUrl={imageUrl}
-          title={title}
+          title={hctitle}
           subtitle={subtitle}
           price={price}
         ></PromoCard>
