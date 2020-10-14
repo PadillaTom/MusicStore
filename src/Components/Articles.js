@@ -18,7 +18,7 @@ const Articles = () => {
           // More stuff
           return (
             <article className='articles-card' key={articleIndex}>
-              <img src={imageUrl} alt='' />
+              <img src={imageUrl} alt='' className='article-img' />
               <div className='article-info'>
                 <h3 className='article-title'>{title}</h3>
                 <p className='article-desc'>{description}</p>

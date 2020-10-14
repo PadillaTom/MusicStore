@@ -492,11 +492,99 @@ a {
 }
 /* End Discounts  */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Articles ::::::::::::::::::::: */
+.articles-article-container {
+  width: 100%;
+}
+.articles-card {
+  width: 90%;
+  margin: 0 auto;
+  background: rgb(226, 226, 226);
+  margin-bottom: 1.3rem;
+  transition: var(--MainTransition);
+  cursor: pointer;
+}
+.articles-card:hover {
+  transform: scale(1.05);
+}
+.article-img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+.article-info {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+.article-title {
+  color: var(--CtaColor);
+  letter-spacing: 1.3px;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+.article-desc {
+  letter-spacing: 1px;
+  font-family: var(--TextsFont);
+}
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* End Articles */
+
+/* ::::::::::::::::::: Visit Stores ::::::::::::::::::::: */
+.stores-sect {
+  min-height: 20vh;
+  background: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+  border-top: 1px solid var(--FontGrayColor);
+  border-bottom: 1px solid var(--FontGrayColor);
+}
+.stores-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.stores-subtitle {
+  color: var(--FontGrayColor);
+  font-family: var(--TitleFont);
+  letter-spacing: 1.2px;
+  padding: 0.8rem 0rem;
+}
+.stores-desc {
+  width: 95%;
+  margin: 0 auto;
+  font-family: var(--TextsFont);
+  letter-spacing: 1px;
+  padding-bottom: 0.3rem;
+}
+.btn-stores {
+  border: 1px solid var(--CtaColor);
+  color: var(--CtaColor);
+  background: transparent;
+  margin-top: 1rem;
+  padding: 0.5rem 4rem;
+  font-family: var(--CtaFonts);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.btn-stores:hover {
+  color: white;
+  background: var(--CtaColor);
+  border: 1px solid white;
+}
+
+/* End Visit Stores*/
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
