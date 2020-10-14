@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // Icons:
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { BsBag } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineRight } from 'react-icons/ai';
 // Components:
-import Sidebar from './Sidebar';
+// import Sidebar from './Sidebar';
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <React.Fragment>
-      <nav className='mobile-nav'>
+      <nav className={`mobile-nav ${isOpen && 'fixed-nav'}`}>
         <div className='mobile-nav-container'>
           {/* Hamburg */}
-          <HiMenuAlt2 className='ham-icon'></HiMenuAlt2>
+          {!isOpen ? (
+            <HiMenuAlt2
+              className='ham-icon'
+              onClick={() => setIsOpen(!isOpen)}
+            ></HiMenuAlt2>
+          ) : (
+            <AiOutlineClose
+              className='ham-icon-close'
+              onClick={() => setIsOpen(!isOpen)}
+            ></AiOutlineClose>
+          )}
+
           {/* End Hamburg */}
           {/* Logo */}
           <div className='logo-container'>
@@ -29,7 +44,46 @@ const Navbar = () => {
           {/* End Cart */}
         </div>
       </nav>
-      <Sidebar></Sidebar>
+      {/* Sidebar */}
+      {isOpen && (
+        <div className={`sidebar-container ${isOpen && 'show-sidebar'}`}>
+          <ul className='side-links' onClick={() => setIsOpen(!isOpen)}>
+            <li className='side-link'>
+              <Link to='/'>Home</Link>
+            </li>
+            <li className='side-link'>
+              <Link to='/guitars'>Guitars</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <li className='side-link'>
+              <Link to='/basses'>Basses</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <li className='side-link'>
+              <Link to='/articles'>Articles</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <li className='side-link'>
+              <Link to='/about'>About</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <li className='side-link'>
+              <Link to='/contact'>Contact</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <div className='sidebar-division'></div>
+            <li className='side-link'>
+              <Link to='/login'>Login</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+            <li className='side-link'>
+              <Link to='/cart'>Cart</Link>
+              <AiOutlineRight></AiOutlineRight>
+            </li>
+          </ul>
+        </div>
+      )}
+      {/* End Sidebar */}
     </React.Fragment>
   );
 };
