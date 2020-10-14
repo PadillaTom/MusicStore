@@ -73,7 +73,6 @@ const ArtistsCardHome = ({ imageUrl, id, name, subtitle }) => {
             return (
               <article className={`artist-card ${position}`} key={id}>
                 <img src={imageUrl} alt={name} className='artist-card-img' />
-
                 <div className='artist-card-info'>
                   <h2>{name}</h2>
                   <p>{subtitle}</p>

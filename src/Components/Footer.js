@@ -18,7 +18,10 @@ const Footer = () => {
         <div className='footer-container'>
           <div className='footer-light'>
             <div className='footer-social-icons'>
-              <h4>Follow us:</h4>
+              <div className='footer-title'>
+                <h4>Follow us</h4>
+                <div className='footer-title-element'></div>
+              </div>
               <div className='social-name'>
                 <AiOutlineFacebook></AiOutlineFacebook>
                 <p>Facebook</p>
@@ -41,7 +44,10 @@ const Footer = () => {
               </div>
             </div>
             <div className='legal-notices'>
-              <h4>Legal Notices:</h4>
+              <div className='footer-title'>
+                <h4>Legal Notices</h4>
+                <div className='footer-title-element'></div>
+              </div>
               <Link to='/' className='single-legal'>
                 Terms of Use
               </Link>

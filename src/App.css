@@ -295,7 +295,7 @@ a {
   width: 100%;
   /* Stuff for Slider */
   /*Must have height*/
-  height: 40rem;
+  height: 37rem;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -306,7 +306,7 @@ a {
   width: 100%;
   height: 35rem;
   background: white;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   /* Stuff for Slider */
@@ -387,7 +387,7 @@ a {
 
 /* ::::::::::::::::::: Newsletter ::::::::::::::::::::: */
 .newsletter-sect {
-  min-height: 25vh;
+  min-height: 22vh;
 }
 .newsletter-title-container {
   width: 97%;
@@ -588,6 +588,17 @@ a {
   display: flex;
   place-items: center;
   justify-content: center;
+  color: var(--FontGrayColor);
+}
+.footer-title {
+  display: flex;
+  align-items: center;
+}
+.footer-title-element {
+  width: 45%;
+  height: 0.5px;
+  background: var(--FontGrayColor);
+  margin-left: 0.5rem;
 }
 
 /* End Footer */
