@@ -6,6 +6,7 @@ import PromoProducts from '../Components/PromoProducts';
 import ArtistsCardHome from '../Components/ArtistsCardHome';
 import Newsletter from '../Components/Newsletter';
 import Discounts from '../Components/Discounts';
+import Articles from '../Components/Articles';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ArtistsCardHome></ArtistsCardHome>
       <Newsletter></Newsletter>
       <Discounts></Discounts>
+      <Articles></Articles>
     </section>
   );
 };
