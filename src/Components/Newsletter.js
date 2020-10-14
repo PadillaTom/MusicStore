@@ -21,6 +21,7 @@ const Newsletter = () => {
           />
           <button className='btn-newsletter'>Join!</button>
         </div>
+        <div className='division-element'></div>
       </div>
     </section>
   );

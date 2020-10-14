@@ -13,6 +13,9 @@ const Discounts = () => {
   return (
     <React.Fragment>
       <section className='section discount-sect'>
+        <div className='section-title'>
+          <h3>Products</h3>
+        </div>
         {discounts.map(({ imageUrl, id, title, description }) => (
           <article className='discount-card' key={id}>
             <img src={imageUrl} alt={title} className='discount-img' />

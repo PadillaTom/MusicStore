@@ -16,7 +16,7 @@ const ArtistsCardHome = ({ imageUrl, id, name, subtitle }) => {
     <React.Fragment>
       <section className='section artists-card-sect'>
         <div className='section-title'>
-          <h2>Our Artists</h2>
+          <h3>Our Artists</h3>
         </div>
         {artists.map(({ id, imageUrl, name, subtitle }) => (
           <article className={`artist-card`} key={id}>

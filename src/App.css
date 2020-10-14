@@ -408,6 +408,12 @@ a {
   color: black;
   border: 0.076rem solid black;
 }
+.division-element {
+  width: 95%;
+  height: 1px;
+  background: var(--FontGrayColor);
+  margin: 0 auto;
+}
 /* End Newsletter*/
 
 /* ::::::::::::::::::: Discounts ::::::::::::::::::::: */
@@ -421,6 +427,7 @@ a {
   text-align: center;
   background: white;
   margin-bottom: 3rem;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 .discount-img {
   width: 100%;
