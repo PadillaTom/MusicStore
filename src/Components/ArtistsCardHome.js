@@ -30,6 +30,7 @@ const ArtistsCardHome = ({ imageUrl, id, name, subtitle }) => {
     }, 2500);
     return () => clearInterval(cleaner);
   }, [index]);
+
   // Main:
   return (
     <React.Fragment>
@@ -38,6 +39,21 @@ const ArtistsCardHome = ({ imageUrl, id, name, subtitle }) => {
           <h3>Our Artists</h3>
         </div>
         <div className='artist-card-container'>
+          <div className='card-article-selector'>
+            <AiOutlineLeft
+              className='selector-arrow'
+              onClick={() => setIndex(index - 1)}
+            ></AiOutlineLeft>
+            <div className='selectors-container'>
+              <div className={`single-selector`}></div>
+              <div className={`single-selector`}></div>
+              <div className={`single-selector`}></div>
+            </div>
+            <AiOutlineRight
+              className='selector-arrow'
+              onClick={() => setIndex(index + 1)}
+            ></AiOutlineRight>
+          </div>
           {artists.map(({ id, imageUrl, name, subtitle }, artistIndex) => {
             // :::::::::::::::: Slider Functionality ::::::::::::::
             let position = 'nextSlide';
@@ -57,21 +73,7 @@ const ArtistsCardHome = ({ imageUrl, id, name, subtitle }) => {
             return (
               <article className={`artist-card ${position}`} key={id}>
                 <img src={imageUrl} alt={name} className='artist-card-img' />
-                <div className='card-article-selector'>
-                  <AiOutlineLeft
-                    className='selector-arrow'
-                    onClick={() => setIndex(index - 1)}
-                  ></AiOutlineLeft>
-                  <div className='selectors-container'>
-                    <div className={`single-selector`}></div>
-                    <div className={`single-selector`}></div>
-                    <div className={`single-selector`}></div>
-                  </div>
-                  <AiOutlineRight
-                    className='selector-arrow'
-                    onClick={() => setIndex(index + 1)}
-                  ></AiOutlineRight>
-                </div>
+
                 <div className='artist-card-info'>
                   <h2>{name}</h2>
                   <p>{subtitle}</p>

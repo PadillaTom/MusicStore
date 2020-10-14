@@ -323,6 +323,7 @@ a {
   width: 95%;
   height: 13rem;
   margin: 0 auto;
+  margin-top: 1.2rem;
   color: var(--GrayColor);
   background-color: white;
   padding: 0.5rem 0rem;
@@ -350,11 +351,16 @@ a {
 /* Card Selectors */
 .card-article-selector {
   margin: 0 auto;
-  margin-top: 1rem;
+  padding-top: 1rem;
   width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: absolute;
+  z-index: 2;
+  top: 54.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .selectors-container {
   display: flex;
