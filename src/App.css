@@ -198,12 +198,14 @@ a {
   transform: translateX(0);
 }
 .lastSlide {
+  opacity: 0;
   transform: translateX(-100%);
 }
 .nextSlide {
+  opacity: 0;
   transform: translateX(100%);
 }
-/* End Dynamic */
+/* End Dynamic  ----------------------------------------------------- */
 .banner-info {
   z-index: 2;
   width: 90%;
@@ -289,24 +291,44 @@ a {
 .artists-card-sect {
   min-height: 50vh;
 }
-.artist-card {
-  transition: var(--MainTransition);
+.artist-card-container {
   width: 100%;
-  height: 100%;
+  /* Stuff for Slider */
+  /*Must have height*/
+  height: 40rem;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s ease-in-out all;
+}
+.artist-card {
+  transition: 0.25s ease-in-out all;
+  width: 100%;
+  height: 35rem;
   background: white;
   margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* Stuff for Slider */
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .artist-card-img {
   width: 100%;
-  height: 100%;
+  height: 21rem;
   object-fit: cover;
 }
 .artist-card-info {
   width: 95%;
+  height: 13rem;
   margin: 0 auto;
   color: var(--GrayColor);
   background-color: white;
   padding: 0.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .artist-card-info h2 {
   font-family: var(--CtaFonts);
@@ -329,17 +351,30 @@ a {
 .card-article-selector {
   margin: 0 auto;
   margin-top: 1rem;
-  width: 35%;
+  width: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+.selectors-container {
+  display: flex;
+  align-items: center;
+}
 .single-selector {
-  width: 2.5rem;
+  width: 2rem;
   background-color: #a3a3a3;
-  height: 0.15rem;
+  height: 1px;
   border-radius: 2px;
   cursor: pointer;
+  margin: 0rem 0.3rem;
+}
+.selector-arrow {
+  color: var(--FontGrayColor);
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.selector-arrow:hover {
+  color: var(--CtaColor);
 }
 /* End Cart Selectors */
 /* End Artist Card */
@@ -422,11 +457,11 @@ a {
 }
 .discount-card {
   width: 100%;
-  height: 25rem;
+  /* height: 25rem; */
   margin: 0 auto;
   text-align: center;
   background: white;
-  margin-bottom: 3rem;
+  margin-bottom: 1.2rem;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 .discount-img {
@@ -447,6 +482,7 @@ a {
   font-family: var(--TextsFont);
   color: var(--FontGrayColor);
   letter-spacing: 1.1px;
+  padding-bottom: 1rem;
 }
 /* End Discounts  */
 
