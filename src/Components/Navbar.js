@@ -52,13 +52,10 @@ const Navbar = () => {
               <Link to='/'>Home</Link>
             </li>
             <li className='side-link'>
-              <Link to='/guitars'>Guitars</Link>
+              <Link to='/instruments'>Musical Instruments</Link>
               <AiOutlineRight></AiOutlineRight>
             </li>
-            <li className='side-link'>
-              <Link to='/basses'>Basses</Link>
-              <AiOutlineRight></AiOutlineRight>
-            </li>
+
             <li className='side-link'>
               <Link to='/articles'>Articles</Link>
               <AiOutlineRight></AiOutlineRight>

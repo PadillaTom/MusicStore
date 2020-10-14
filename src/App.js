@@ -11,6 +11,7 @@ import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import LoginPage from './Pages/LoginPage';
 import CartPage from './Pages/CartPage';
+import InsturmentsPage from './Pages/InstrumentsPage';
 
 // Components:
 import Navbar from './Components/Navbar';
@@ -23,6 +24,9 @@ function App() {
       <Switch>
         <Route path='/' exact>
           <Home></Home>
+        </Route>
+        <Route path='/instruments'>
+          <InstrumentsPage></InstrumentsPage>
         </Route>
         <Route path='/guitars'>
           <GuitarsPage></GuitarsPage>

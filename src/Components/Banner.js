@@ -50,7 +50,9 @@ const Banner = () => {
 
       <div className='banner-info'>
         <h2>Everything is just one click away.</h2>
-        <button className='btn-banner'>Discover!</button>
+        <Link to='/instruments'>
+          <button className='btn-banner'>Discover!</button>
+        </Link>
       </div>
     </section>
   );

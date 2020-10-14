@@ -8,8 +8,8 @@ const PromoCard = ({ title, subtitle, imageUrl }) => {
       <div className='promo-info'>
         <h4 className='promo-subtitle'>{subtitle}</h4>
         <h2 className='promo-title'> {title}</h2>
-        <Link to='/' className='cta-promo'>
-          <p>See all Instruments...</p>
+        <Link to='/instruments' className='cta-promo'>
+          <p>Explore...</p>
         </Link>
       </div>
     </article>
