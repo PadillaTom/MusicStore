@@ -1,13 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import db from '../firebase';
+import React from 'react';
+import { ProductContext } from '../Context/ProductContext';
+import BassCard from '../Components/BassCard';
+import { Link } from 'react-router-dom';
 
 const GuitarsPage = () => {
-  const [guitars, setGuitars] = useState([]);
-
+  const { products } = React.useContext(ProductContext);
+  const guitars = products.filter((item) => item.class === 'guitar');
+  // Main:
   return (
-    <div>
-      <h1>Hello from Guitars Page</h1>
-    </div>
+    <React.Fragment>
+      <section className='section bass-sect'>
+        <div className='section-title'>
+          <h2>Guitars</h2>
+        </div>
+        <div className='basses-cards-container'>
+          {guitars.map((guitar, guitarIndex) => {
+            return <BassCard key={guitarIndex} {...guitar}></BassCard>;
+          })}
+        </div>
+        <Link to='/instruments'>
+          <p className='single-instrument-btn'>Go Back</p>
+        </Link>
+      </section>
+    </React.Fragment>
   );
 };
 
