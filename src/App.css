@@ -632,9 +632,9 @@ a {
   padding-bottom: 0.3rem;
 }
 .btn-stores {
-  border: 1px solid var(--CtaColor);
-  color: var(--CtaColor);
-  background: transparent;
+  color: white;
+  background: var(--CtaColor);
+  border: 1px solid white;
   margin-top: 1rem;
   padding: 0.5rem 4rem;
   font-family: var(--CtaFonts);
@@ -645,12 +645,139 @@ a {
   transition: var(--MainTransition);
 }
 .btn-stores:hover {
+  border: 1px solid var(--CtaColor);
+  color: var(--CtaColor);
+  background: transparent;
+}
+/* End Visit Stores*/
+
+/* ::::::::::::::::::: About Page ::::::::::::::::::::: */
+.about-sect {
+  min-height: 45vh;
+  text-align: center;
+}
+.about-img {
+  width: 90%;
+  height: 12rem;
+  object-fit: cover;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 1rem;
+  border: 2px solid var(--GrayColor);
+}
+.about-info {
+  width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--TextsFont);
+  letter-spacing: 1.2px;
+  color: var(--GrayColor);
+  padding: 1rem 0rem;
+  margin-bottom: 1rem;
+}
+.btn-about {
+  border: 1px solid var(--CtaColor);
+  color: var(--CtaColor);
+  background: transparent;
+  padding: 0.5rem 4rem;
+  font-family: var(--CtaFonts);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--MainTransition);
+  margin-bottom: 3rem;
+}
+.btn-about:hover {
   color: white;
   background: var(--CtaColor);
   border: 1px solid white;
 }
+/* End About Page */
 
-/* End Visit Stores*/
+/* ::::::::::::::::::: Contact Page ::::::::::::::::::::: */
+.contact-subtitle {
+  text-align: center;
+  color: var(--FontGrayColor);
+  font-family: var(--TextsFont);
+  letter-spacing: 1.1px;
+  margin-bottom: 1rem;
+}
+.contact-form {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+.form-control {
+  margin-bottom: 1rem;
+}
+.single-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.single-label {
+  font-size: 1.1rem;
+  color: var(--CtaColor);
+  font-family: var(--TitleFont);
+  margin-bottom: 0.2rem;
+}
+.single-input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--FontGrayColor);
+  padding: 0.3rem;
+}
+.single-input::placeholder {
+  font-size: 0.7rem;
+  color: #686868ad;
+  text-align: center;
+}
+.form-msg-control {
+  margin: 1rem 0rem;
+}
+.form-msg {
+  margin-top: 0.3rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--FontGrayColor);
+  resize: none;
+}
+.form-msg::placeholder {
+  text-align: center;
+  color: #686868ad;
+}
+.btn-form {
+  width: 100%;
+  border: 1px solid var(--CtaColor);
+  color: var(--CtaColor);
+  background: transparent;
+  padding: 0.5rem 4rem;
+  font-family: var(--CtaFonts);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--MainTransition);
+  margin-bottom: 1rem;
+}
+.btn-form:hover {
+  color: white;
+  background: var(--CtaColor);
+  border: 1px solid white;
+}
+/* End Contact Page */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
+
+/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
+/* End Variables */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
