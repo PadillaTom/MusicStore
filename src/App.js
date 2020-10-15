@@ -6,7 +6,6 @@ import Home from './Pages/Home';
 import Error from './Pages/Error';
 import GuitarsPage from './Pages/GuitarsPage';
 import BassesPage from './Pages/BassesPage';
-import ArticlesPage from './Pages/ArticlesPage';
 import AboutPage from './Pages/AboutPage';
 import ContactPage from './Pages/ContactPage';
 import LoginPage from './Pages/LoginPage';
@@ -33,9 +32,6 @@ function App() {
         </Route>
         <Route path='/basses'>
           <BassesPage></BassesPage>
-        </Route>
-        <Route path='/articles'>
-          <ArticlesPage></ArticlesPage>
         </Route>
         <Route path='/about'>
           <AboutPage></AboutPage>

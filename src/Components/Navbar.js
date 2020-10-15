@@ -5,6 +5,7 @@ import { HiMenuAlt2 } from 'react-icons/hi';
 import { BsBag } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
+import { FcAddressBook, FcPhoneAndroid } from 'react-icons/fc';
 // Components:
 // import Sidebar from './Sidebar';
 
@@ -53,31 +54,36 @@ const Navbar = () => {
             </li>
             <li className='side-link'>
               <Link to='/instruments'>Musical Instruments</Link>
-              <AiOutlineRight></AiOutlineRight>
-            </li>
-
-            <li className='side-link'>
-              <Link to='/articles'>Articles</Link>
-              <AiOutlineRight></AiOutlineRight>
+              <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
             <li className='side-link'>
               <Link to='/about'>About</Link>
-              <AiOutlineRight></AiOutlineRight>
+              <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
             <li className='side-link'>
               <Link to='/contact'>Contact</Link>
-              <AiOutlineRight></AiOutlineRight>
+              <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
             <div className='sidebar-division'></div>
             <li className='side-link'>
               <Link to='/login'>Login</Link>
-              <AiOutlineRight></AiOutlineRight>
+              <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
             <li className='side-link'>
               <Link to='/cart'>Cart</Link>
-              <AiOutlineRight></AiOutlineRight>
+              <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
           </ul>
+          <div className='sidebar-contact-info'>
+            <div className='contact-single-sidebar'>
+              <FcAddressBook></FcAddressBook>
+              <p>musicstore@store.com</p>
+            </div>
+            <div className='contact-single-sidebar'>
+              <FcPhoneAndroid></FcPhoneAndroid>
+              <p>+41 111 222 33 33</p>
+            </div>
+          </div>
         </div>
       )}
       {/* End Sidebar */}
