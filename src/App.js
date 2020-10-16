@@ -15,41 +15,44 @@ import InstrumentsPage from './Pages/InstrumentsPage';
 // Components:
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
+import ScrollToTop from './Context/ScrollToTop';
 
 function App() {
   return (
     <Router>
-      <Navbar></Navbar>
-      <Switch>
-        <Route path='/' exact>
-          <Home></Home>
-        </Route>
-        <Route path='/instruments'>
-          <InstrumentsPage></InstrumentsPage>
-        </Route>
-        <Route path='/guitars'>
-          <GuitarsPage></GuitarsPage>
-        </Route>
-        <Route path='/basses'>
-          <BassesPage></BassesPage>
-        </Route>
-        <Route path='/about'>
-          <AboutPage></AboutPage>
-        </Route>
-        <Route path='/contact'>
-          <ContactPage></ContactPage>
-        </Route>
-        <Route path='/login'>
-          <LoginPage></LoginPage>
-        </Route>
-        <Route path='/cart'>
-          <CartPage></CartPage>
-        </Route>
-        <Route path='*'>
-          <Error></Error>
-        </Route>
-      </Switch>
-      <Footer></Footer>
+      <ScrollToTop>
+        <Navbar></Navbar>
+        <Switch>
+          <Route path='/' exact>
+            <Home></Home>
+          </Route>
+          <Route path='/instruments'>
+            <InstrumentsPage></InstrumentsPage>
+          </Route>
+          <Route path='/guitars'>
+            <GuitarsPage></GuitarsPage>
+          </Route>
+          <Route path='/basses'>
+            <BassesPage></BassesPage>
+          </Route>
+          <Route path='/about'>
+            <AboutPage></AboutPage>
+          </Route>
+          <Route path='/contact'>
+            <ContactPage></ContactPage>
+          </Route>
+          <Route path='/login'>
+            <LoginPage></LoginPage>
+          </Route>
+          <Route path='/cart'>
+            <CartPage></CartPage>
+          </Route>
+          <Route path='*'>
+            <Error></Error>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </ScrollToTop>
     </Router>
   );
 }

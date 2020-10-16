@@ -589,7 +589,7 @@ a {
   width: 100%;
 }
 .articles-card {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   background: rgba(90, 90, 90, 0.09);
   margin-bottom: 1.3rem;
@@ -985,13 +985,14 @@ a {
 
 /* ::::::::::::::::::: Cart Item ::::::::::::::::::::: */
 .cart-item {
-  width: 95%;
+  width: 85%;
+  margin: 0 auto;
   height: 7rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
-  margin-bottom: 0.5rem;
-  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.8rem;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
   text-align: initial;
 }
 .cartitem-img {
@@ -1067,6 +1068,13 @@ a {
   min-height: 70vh;
   text-align: center;
 }
+.cta-backshop {
+  color: black;
+  margin-bottom: 1rem;
+  letter-spacing: 1.2px;
+  font-family: var(--LogoFont);
+  cursor: pointer;
+}
 .cartpage-footer {
   margin: 4rem auto;
 }
@@ -1077,7 +1085,7 @@ a {
   letter-spacing: 2px;
   margin-bottom: 2rem;
 }
-.btn-clearcart {
+.btn-checkout {
   border: 1px solid var(--CtaColor);
   color: var(--CtaColor);
   background: transparent;
@@ -1089,10 +1097,15 @@ a {
   cursor: pointer;
   transition: var(--MainTransition);
 }
-.btn-clearcart:hover {
+.btn-checkout:hover {
   border: 1px solid white;
   color: white;
   background: black;
+}
+.cta-clearcart {
+  margin-top: 0.5rem;
+  color: var(--FontGrayColor);
+  letter-spacing: 1.3px;
 }
 /* End Cart Page */
 
