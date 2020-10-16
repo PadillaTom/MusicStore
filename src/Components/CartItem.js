@@ -12,7 +12,7 @@ const CartItem = ({ imageUrl, price, title, amount, id }) => {
       <img src={imageUrl} alt='cartitem' className='cartitem-img' />
       <div className='cartitem-info'>
         <h3 className='cartitem-name'>{title}</h3>
-        <p className='cartitem-price'>{price}</p>
+        <p className='cartitem-price'>${price}</p>
         <button
           className='cartitem-remove'
           onClick={() => {

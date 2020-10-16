@@ -17,8 +17,11 @@ const CartProvider = ({ children }) => {
 
   // Cart Functions :
 
-  const addCart = (id) => {
-    dispatch({ type: 'ADD_CART', payload: id });
+  const addCart = (id, imageUrl, price, title, amount) => {
+    dispatch({
+      type: 'ADD_CART',
+      payload: { id, imageUrl, price, title, amount },
+    });
   };
 
   const clearCart = () => {

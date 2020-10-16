@@ -1,6 +1,14 @@
 import React from 'react';
 import { CartContext } from '../Context/CartContext';
-const BassCard = ({ description, imageUrl, price, subtitle, title, id }) => {
+const BassCard = ({
+  description,
+  imageUrl,
+  price,
+  subtitle,
+  title,
+  id,
+  amount,
+}) => {
   const { addCart } = React.useContext(CartContext);
   // Main:
   return (
@@ -14,7 +22,7 @@ const BassCard = ({ description, imageUrl, price, subtitle, title, id }) => {
         <button
           className='btn-addcart'
           onClick={() => {
-            addCart(id);
+            addCart(id, imageUrl, price, title, amount);
           }}
         >
           <h4>Add to Cart</h4>
