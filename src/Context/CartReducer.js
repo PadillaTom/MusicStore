@@ -3,7 +3,8 @@ const CartReducer = (state, action) => {
 
   // Add to Cart:
   if (action.type === 'ADD_CART') {
-    return { state };
+    console.log(`Added to cart: ${action.payload}`);
+    console.log(`${action.payload} properties: Undef`);
   }
 
   // Clear Cart:

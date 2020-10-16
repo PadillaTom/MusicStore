@@ -10,6 +10,7 @@ import Articles from '../Components/Articles';
 import VisitStores from '../Components/VisitStores';
 
 const Home = () => {
+  // Main:
   return (
     <section className='section'>
       <Banner></Banner>

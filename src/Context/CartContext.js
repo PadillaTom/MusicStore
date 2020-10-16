@@ -16,7 +16,10 @@ const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
   // Cart Functions :
-  // Add to Cart:
+
+  const addCart = (id) => {
+    dispatch({ type: 'ADD_CART', payload: id });
+  };
 
   const clearCart = () => {
     dispatch({ type: 'CLEAR_CART' });
@@ -45,6 +48,7 @@ const CartProvider = ({ children }) => {
         removeItem,
         increaseAmount,
         decreaseAmount,
+        addCart,
       }}
     >
       {children}
