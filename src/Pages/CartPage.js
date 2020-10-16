@@ -5,8 +5,8 @@ import CartItem from '../Components/CartItem';
 import EmptyCart from '../Components/EmptyCart';
 
 const CartPage = () => {
-  const { cart } = useContext(CartContext);
-  console.log(cart);
+  const { cart, total, clearCart } = useContext(CartContext);
+
   return (
     <React.Fragment>
       <section className='section cart-sect'>
@@ -16,20 +16,24 @@ const CartPage = () => {
         {cart.length === 0 ? (
           <EmptyCart></EmptyCart>
         ) : (
-          <div className='section-center'>
-            {cart.map((item, itemIndex) => {
-              return <CartItem key={itemIndex} {...item}></CartItem>;
-            })}
-          </div>
+          <React.Fragment>
+            <div className='section-center'>
+              {cart.map((item, itemIndex) => {
+                return <CartItem key={itemIndex} {...item}></CartItem>;
+              })}
+            </div>
+            <div className='cartpage-footer'>
+              <div className='cart-total'>
+                <h4>
+                  Subtotal: <span>${total}</span>
+                </h4>
+              </div>
+              <button className='btn-clearcart' onClick={clearCart}>
+                Clear Cart
+              </button>
+            </div>
+          </React.Fragment>
         )}
-        <div className='cartpage-footer'>
-          <div className='cart-total'>
-            <h4>
-              Subtotal: <span>$1000</span>
-            </h4>
-          </div>
-          <button className='btn-clearcart'>Clear Cart</button>
-        </div>
       </section>
     </React.Fragment>
   );

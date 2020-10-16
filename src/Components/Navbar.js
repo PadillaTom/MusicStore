@@ -6,11 +6,13 @@ import { BsBag } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 import { FcAddressBook, FcPhoneAndroid } from 'react-icons/fc';
-// Components:
-// import Sidebar from './Sidebar';
+// Context:
+import { CartContext } from '../Context/CartContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  // Amount form CartReducer / Context, etc:
+  const { amount } = React.useContext(CartContext);
 
   return (
     <React.Fragment>
@@ -38,10 +40,12 @@ const Navbar = () => {
           </div>
           {/* End Logo */}
           {/* Cart */}
-          <div className='cart-container'>
-            <BsBag className='cart-bag'></BsBag>
-            <p className='bag-amount'>1</p>
-          </div>
+          <Link to='/cart'>
+            <div className='cart-container'>
+              <BsBag className='cart-bag'></BsBag>
+              <p className='bag-amount'>{amount}</p>
+            </div>
+          </Link>
           {/* End Cart */}
         </div>
       </nav>

@@ -160,7 +160,7 @@ a {
   font-family: var(--CtaFonts);
   font-size: 1.1rem;
   font-weight: 500;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -914,12 +914,28 @@ a {
   letter-spacing: 1px;
   padding: 1.2rem 0rem;
 }
-
 .bass-price {
   color: black;
   font-size: 2rem;
   letter-spacing: 2px;
   font-family: var(--LogoFont);
+}
+.btn-addcart {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: var(--TitleFont);
+  cursor: pointer;
+  transition: var(--MainTransition);
+  border: 1px solid black;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem 0rem;
+  margin-top: 2rem;
+}
+.btn-addcart:hover {
+  background: black;
+  color: white;
 }
 /* End Bass Card */
 
@@ -1009,6 +1025,10 @@ a {
   letter-spacing: 1.2px;
   cursor: pointer;
   transition: var(--MainTransition);
+  border: none;
+  outline: none;
+  background: none;
+  margin: 0 auto;
 }
 .cartitem-remove:hover {
   color: var(--CtaColor);
@@ -1032,6 +1052,9 @@ a {
   cursor: pointer;
   transition: var(--MainTransition);
   color: var(--FontGrayColor);
+  background: none;
+  outline: none;
+  border: none;
 }
 #amount-control:hover {
   color: black;
