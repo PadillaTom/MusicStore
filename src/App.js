@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { auth } from './firebase';
+
 // Pages:
 import Home from './Pages/Home';
 import Error from './Pages/Error';
@@ -12,23 +12,12 @@ import ContactPage from './Pages/ContactPage';
 import LoginPage from './Pages/LoginPage';
 import CartPage from './Pages/CartPage';
 import InstrumentsPage from './Pages/InstrumentsPage';
-
 // Components:
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ScrollToTop from './Context/ScrollToTop';
 
 function App() {
-  // Keep Track of Users:
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      if (authUser) {
-        // Logged In:
-      } else {
-        // Logged Out:
-      }
-    });
-  }, []);
   return (
     <Router>
       <ScrollToTop>

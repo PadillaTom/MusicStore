@@ -10,13 +10,13 @@ const initialState = {
   cart: [],
   total: 0,
   amount: 0,
+  user: null,
 };
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
   // Cart Functions :
-
   const addCart = (id, imageUrl, price, title, amount) => {
     dispatch({
       type: 'ADD_CART',

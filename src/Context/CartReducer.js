@@ -1,6 +1,5 @@
 const CartReducer = (state, action) => {
   // We can use SWITCH / CASE instead of IFs*********
-
   // Add to Cart:
   if (action.type === 'ADD_CART') {
     return { ...state, cart: [...state.cart, action.payload] };
