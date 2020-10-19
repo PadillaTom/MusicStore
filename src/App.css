@@ -1114,8 +1114,31 @@ a {
 
 /* End Scroll To Top */
 
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
+/* ::::::::::::::::::: Login Page ::::::::::::::::::::: */
+.login-sect {
+  margin-bottom: 2rem;
+}
+.cta-register {
+  font-family: var(--TitleFont);
+  letter-spacing: 1.3px;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+}
+/* Login Form */
+.login-form {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 1rem;
+}
+.login {
+  margin: 2rem auto;
+}
+/* Register Form */
+/* End Login Page */
 
 /* ::::::::::::::::::: Variables ::::::::::::::::::::: */
 /* End Variables */
