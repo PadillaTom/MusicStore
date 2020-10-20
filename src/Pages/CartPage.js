@@ -14,15 +14,16 @@ const CartPage = () => {
         <div className='section-title'>
           <h2>Your Cart</h2>
         </div>
-        <div className='cta-backshop'>
-          <Link to='/instruments'>
-            <p>Continue Shopping</p>
-          </Link>
-        </div>
+
         {cart.length === 0 ? (
           <EmptyCart></EmptyCart>
         ) : (
           <React.Fragment>
+            <div className='cta-backshop'>
+              <Link to='/instruments'>
+                <p>Continue Shopping</p>
+              </Link>
+            </div>
             <div className='section-center'>
               {cart.map((item, itemIndex) => {
                 return <CartItem key={itemIndex} {...item}></CartItem>;

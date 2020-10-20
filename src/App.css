@@ -33,6 +33,7 @@ a {
 .section {
   max-width: 100vw;
   margin: 0 auto;
+  margin-top: 4rem;
 }
 .section-center {
   max-width: 90%;
@@ -41,7 +42,7 @@ a {
 .section-title {
   width: 90%;
   margin: 0 auto;
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   padding-bottom: 1.5rem;
   text-align: center;
   text-transform: capitalize;
@@ -115,10 +116,9 @@ a {
   text-align: center;
 }
 /* End Error */
-/* Desktop Nav*/
-/* End Desktop Nav*/
 
 /* ::::::::::::::::::: Navbar ::::::::::::::::::::: */
+/*  -----------> Mobile <----------- */
 .mobile-nav {
   width: 100%;
   height: 4rem;
@@ -129,7 +129,6 @@ a {
   left: 0;
   z-index: 10;
 }
-/*  -----------> Mobile <----------- */
 /* Header */
 .mobile-nav-container {
   width: 90%;
@@ -246,7 +245,20 @@ a {
 .contact-single-sidebar p {
   flex: 1;
 }
+@media screen and (min-width: 730px) {
+  .side-links {
+    width: 85%;
+  }
+  .sidebar-contact-info {
+    margin-top: 4rem;
+  }
+}
 /*  -----------> End Mobile <----------- */
+@media screen and (min-width: 800px) {
+  .mobile-nav {
+    background-color: red;
+  }
+}
 /* End Navbar */
 
 /* ::::::::::::::::::: Banner Slider ::::::::::::::::::::: */
@@ -331,6 +343,18 @@ a {
   color: white;
 }
 /* End Banner Slider */
+@media screen and (min-width: 730px) {
+  .banner-sect {
+    height: 85vh;
+  }
+  .banner-info {
+    font-size: 1.2rem;
+  }
+  .btn-banner {
+    font-size: 1rem;
+  }
+}
+/* End Banner */
 
 /* ::::::::::::::::::: Loading ::::::::::::::::::::: */
 .loading {
@@ -384,6 +408,16 @@ a {
 .cta-promo:hover {
   color: #1a1a1a;
 }
+@media screen and (min-width: 730px) {
+  .promo-sect {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .promo-card {
+    width: 100%;
+  }
+}
 /* End Promoted Card */
 
 /* ::::::::::::::::::: Artist Card ::::::::::::::::::::: */
@@ -393,8 +427,7 @@ a {
 .artist-card-container {
   width: 100%;
   /* Stuff for Slider */
-  /*Must have height*/
-  height: 38rem;
+  height: 38rem; /*Must have height*/
   display: flex;
   position: relative;
   overflow: hidden;
@@ -554,6 +587,25 @@ a {
   background: var(--FontGrayColor);
   margin: 0 auto;
 }
+@media screen and (min-width: 730px) {
+  .newsletter-sect {
+    margin-bottom: 3rem;
+  }
+  .newsletter-title {
+    font-size: 1.4rem;
+  }
+  .title-element {
+    width: 10rem;
+  }
+  .newsletter-cta-text {
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .newsletter-input {
+    padding: 0.5rem 1rem;
+  }
+}
 /* End Newsletter*/
 
 /* ::::::::::::::::::: Discounts ::::::::::::::::::::: */
@@ -588,6 +640,20 @@ a {
   color: var(--FontGrayColor);
   letter-spacing: 1.1px;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 730px) {
+  .discount-img {
+    height: 23rem;
+  }
+  .discount-title {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+  }
+  .discount-desc {
+    width: 75%;
+    font-size: 1.2rem;
+    padding: 2rem 0rem;
+  }
 }
 /* End Discounts  */
 
@@ -627,7 +693,12 @@ a {
   letter-spacing: 1px;
   font-family: var(--TextsFont);
 }
-
+@media screen and (min-width: 730px) {
+  .articles-article-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 /* End Articles */
 
 /* ::::::::::::::::::: Visit Stores ::::::::::::::::::::: */
@@ -682,6 +753,11 @@ a {
   color: var(--CtaColor);
   background: transparent;
 }
+@media screen and (min-width: 730px) {
+  .stores-sect {
+    min-height: 30vh;
+  }
+}
 /* End Visit Stores*/
 
 /* ::::::::::::::::::: About Page ::::::::::::::::::::: */
@@ -725,6 +801,12 @@ a {
   color: white;
   background: var(--CtaColor);
   border: 1px solid white;
+}
+@media screen and (min-width: 730px) {
+  .about-img {
+    width: 70%;
+    height: 22rem;
+  }
 }
 /* End About Page */
 
@@ -804,10 +886,21 @@ a {
   background: var(--CtaColor);
   border: 1px solid white;
 }
+@media screen and (min-width: 730px) {
+  .contact-subtitle {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .contact-form {
+    width: 85%;
+  }
+}
 /* End Contact Page */
 
 /* ::::::::::::::::::: Instruments Page::::::::::::::::::::: */
-.instruments-cards-container {
+.instrument-cards-container {
   width: 100%;
   margin: 0 auto;
 }
@@ -875,6 +968,17 @@ a {
   color: var(--GrayColor);
   letter-spacing: 1.3px;
   cursor: pointer;
+}
+@media screen and (min-width: 730px) {
+  .instrument-img {
+    height: 24rem;
+  }
+}
+@media screen and (min-width: 850px) {
+  .instrument-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 /* ::::::::::::::::::: Bass Card ::::::::::::::::::::: */
 .bass-sect {
@@ -944,6 +1048,14 @@ a {
   background: black;
   color: white;
 }
+@media screen and (min-width: 730px) {
+  .bass-card {
+    height: 28rem;
+  }
+  .bass-desc {
+    width: 95%;
+  }
+}
 /* End Bass Card */
 
 /* ::::::::::::::::::: Empty Cart ::::::::::::::::::::: */
@@ -988,6 +1100,11 @@ a {
   color: white;
   background: black;
 }
+@media screen and (min-width: 730px) {
+  .empty-sect {
+    min-height: 45vh;
+  }
+}
 /* End Empty Cart */
 
 /* ::::::::::::::::::: Cart Item ::::::::::::::::::::: */
@@ -1000,7 +1117,7 @@ a {
   place-items: center;
   margin-bottom: 0.8rem;
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
-  text-align: initial;
+  text-align: left;
 }
 .cartitem-img {
   width: 100%;
@@ -1009,10 +1126,11 @@ a {
 }
 .cartitem-info {
   width: 85%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: flex-start;
+  margin-left: 2rem;
 }
 .cartitem-name {
   font-size: 1.2rem;
@@ -1036,7 +1154,6 @@ a {
   border: none;
   outline: none;
   background: none;
-  margin: 0 auto;
 }
 .cartitem-remove:hover {
   color: var(--CtaColor);
@@ -1113,6 +1230,7 @@ a {
   margin-top: 0.5rem;
   color: var(--FontGrayColor);
   letter-spacing: 1.3px;
+  cursor: pointer;
 }
 /* End Cart Page */
 
@@ -1131,6 +1249,11 @@ a {
   font-weight: 400;
   margin: 0 auto;
   text-align: center;
+  cursor: pointer;
+  transition: var(--MainTransition);
+}
+.cta-register:hover {
+  color: black;
 }
 /* Login Form */
 .login-form {
@@ -1138,23 +1261,18 @@ a {
   margin: 0 auto;
   background-color: white;
   padding: 1rem 2rem;
-
   border-radius: 1rem;
 }
 .login {
   margin: 2rem auto;
 }
-/* Register Form */
+
+@media screen and (min-width: 730px) {
+  .login-form {
+    width: 75%;
+  }
+}
 /* End Login Page */
-
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
-
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
-
-/* ::::::::::::::::::: Variables ::::::::::::::::::::: */
-/* End Variables */
 
 /* ::::::::::::::::::: Footer ::::::::::::::::::::: */
 .footer-sect {
@@ -1230,7 +1348,7 @@ a {
   text-align: center;
 }
 .footer-dark {
-  height: 3rem;
+  height: 7rem;
   display: flex;
   place-items: center;
   justify-content: center;
@@ -1246,5 +1364,4 @@ a {
   background: var(--FontGrayColor);
   margin-left: 0.5rem;
 }
-
 /* End Footer */

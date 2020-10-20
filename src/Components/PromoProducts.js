@@ -11,16 +11,20 @@ const PromoProducts = () => {
   // Main:
   return (
     <React.Fragment>
-      {promo.map(({ id, imageUrl, subtitle, price, hctitle, class: style }) => (
-        <PromoCard
-          key={id}
-          imageUrl={imageUrl}
-          title={hctitle}
-          subtitle={subtitle}
-          price={price}
-          style={style}
-        ></PromoCard>
-      ))}
+      <section className='promo-sect'>
+        {promo.map(
+          ({ id, imageUrl, subtitle, price, hctitle, class: style }) => (
+            <PromoCard
+              key={id}
+              imageUrl={imageUrl}
+              title={hctitle}
+              subtitle={subtitle}
+              price={price}
+              style={style}
+            ></PromoCard>
+          )
+        )}
+      </section>
     </React.Fragment>
   );
 };
