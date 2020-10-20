@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Icons:
 import { HiMenuAlt2 } from 'react-icons/hi';
 import { BsBag } from 'react-icons/bs';
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineUser } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 import { FcAddressBook, FcPhoneAndroid } from 'react-icons/fc';
 // Context:
@@ -112,6 +112,80 @@ const Navbar = ({ value }) => {
         </div>
       )}
       {/* End Sidebar */}
+      {/* Desktop Nav */}
+      <nav className='desktop-nav'>
+        <div className='desk-container'>
+          <div className='desk-top'>
+            <div className='desk-logo-container'>
+              <Link to='/'>
+                <h2 className='main-logo desk-logo'>Music Store</h2>
+              </Link>
+            </div>
+            <div className='desk-user'>
+              {!value ? (
+                <div className='user-logo'>
+                  <p className='user-logo-text'>
+                    <Link to='/login'>Login</Link>
+                  </p>
+                  <AiOutlineUser></AiOutlineUser>
+                </div>
+              ) : (
+                <div
+                  className='user-logo'
+                  onClick={() => {
+                    logoutUser();
+                  }}
+                >
+                  <p className='user-logo-text'>Logout</p>
+                  <AiOutlineUser></AiOutlineUser>
+                </div>
+              )}
+
+              <div className='desk-user-cart'>
+                <Link to='/cart'>
+                  <BsBag className='desk-cart-bag'></BsBag>
+                  <p className='desk-bag-amount'>{amount}</p>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className='desk-bot'>
+            <ul className='desk-links'>
+              <li className='single-desk-link'>
+                <Link to='/'>
+                  <p>Home</p>
+                </Link>
+              </li>
+              <li className='single-desk-link'>
+                <Link to='/about'>
+                  <p>About</p>
+                </Link>
+              </li>
+              <li className='single-desk-link'>
+                <Link to='/contact'>
+                  <p>Contact</p>
+                </Link>
+              </li>
+              <li className='single-desk-link'>
+                <Link to='/instruments'>
+                  <p>Instruments</p>
+                </Link>
+              </li>
+              <li className='single-desk-link'>
+                <Link to='/'>
+                  <p>Artists</p>
+                </Link>
+              </li>
+              <li className='single-desk-link'>
+                <Link to='/'>
+                  <p>Articles</p>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      {/* End Desktop */}
     </React.Fragment>
   );
 };

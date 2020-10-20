@@ -16,15 +16,17 @@ const Discounts = () => {
         <div className='section-title'>
           <h3>Products</h3>
         </div>
-        {discounts.map(({ imageUrl, id, title, description }, index) => (
-          <article className='discount-card' key={id} id={`pic${index}`}>
-            <img src={imageUrl} alt={title} className='discount-img' />
-            <div className='discount-info'>
-              <h3 className='discount-title'>{title}</h3>
-              <p className='discount-desc'> {description}</p>
-            </div>
-          </article>
-        ))}
+        <div className='discounts-container'>
+          {discounts.map(({ imageUrl, id, title, description }, index) => (
+            <article className='discount-card' key={id} id={`pic${index}`}>
+              <img src={imageUrl} alt={title} className='discount-img' />
+              <div className='discount-info'>
+                <h3 className='discount-title'>{title}</h3>
+                <p className='discount-desc'> {description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </React.Fragment>
   );
