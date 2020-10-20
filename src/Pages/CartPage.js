@@ -6,9 +6,8 @@ import CartItem from '../Components/CartItem';
 import EmptyCart from '../Components/EmptyCart';
 
 const CartPage = () => {
-  const { cart, total, clearCart } = useContext(CartContext);
+  const { cart, total, clearCart, user } = useContext(CartContext);
 
-  let user = false;
   return (
     <React.Fragment>
       <section className='section cart-sect'>

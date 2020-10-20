@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect } from 'react';
+import { auth } from '../firebase';
 
 // Reducer:
 import CartReducer from './CartReducer';
-// import HCData from './HCData';
 
 export const CartContext = React.createContext();
 
@@ -15,6 +15,23 @@ const initialState = {
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
+
+  // USER TRACK:
+  useEffect(() => {
+    const unsuscribe = auth.onAuthStateChanged((authUser) => {
+      if (authUser) {
+        // Is Logged In:
+        dispatch({ type: 'SET_USER', user: authUser });
+      } else {
+        // Is Logged Out:
+        dispatch({ type: 'SET_USER', user: null });
+      }
+    });
+    return () => {
+      // CLEAN UP:
+      unsuscribe();
+    };
+  }, []);
 
   // Cart Functions :
   const addCart = (id, imageUrl, price, title, amount) => {

@@ -17,7 +17,7 @@ const RegisterForm = () => {
         // Create User, login, redirect.
         history.push('/');
       })
-      .catch((e) => alert(e.message));
+      .catch((e) => alert('Account created '));
   };
   // Main:
   return (

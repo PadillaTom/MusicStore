@@ -8,7 +8,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // Submit
+  // USER LOGIN:
   const loginSubmit = (e) => {
     e.preventDefault();
     auth

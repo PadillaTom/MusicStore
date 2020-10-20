@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 // Pages:
 import Home from './Pages/Home';
 import Error from './Pages/Error';
@@ -16,12 +15,16 @@ import InstrumentsPage from './Pages/InstrumentsPage';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ScrollToTop from './Context/ScrollToTop';
+// Context for USER:
+import { CartContext } from './Context/CartContext';
 
 function App() {
+  const { user } = React.useContext(CartContext);
+
   return (
     <Router>
       <ScrollToTop>
-        <Navbar></Navbar>
+        <Navbar value={user}></Navbar>
         <Switch>
           <Route path='/' exact>
             <Home></Home>

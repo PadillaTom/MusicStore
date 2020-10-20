@@ -8,12 +8,20 @@ import { AiOutlineRight } from 'react-icons/ai';
 import { FcAddressBook, FcPhoneAndroid } from 'react-icons/fc';
 // Context:
 import { CartContext } from '../Context/CartContext';
+import { auth } from '../firebase';
 
-const Navbar = () => {
+const Navbar = ({ value }) => {
   const [isOpen, setIsOpen] = useState(false);
   // Amount form CartReducer / Context, etc:
   const { amount } = React.useContext(CartContext);
 
+  // Logout Function:
+  const logoutUser = () => {
+    auth.signOut();
+    alert('You Logged Out.');
+  };
+
+  // Main:
   return (
     <React.Fragment>
       <nav className={`mobile-nav ${isOpen && 'fixed-nav'}`}>
@@ -69,10 +77,23 @@ const Navbar = () => {
               <AiOutlineRight className='side-arrow'></AiOutlineRight>
             </li>
             <div className='sidebar-division'></div>
-            <li className='side-link'>
-              <Link to='/login'>Login</Link>
-              <AiOutlineRight className='side-arrow'></AiOutlineRight>
-            </li>
+            {!value ? (
+              <li className='side-link'>
+                <Link to='/login'>Login</Link>
+                <AiOutlineRight className='side-arrow'></AiOutlineRight>
+              </li>
+            ) : (
+              <li
+                className='side-link'
+                onClick={() => {
+                  logoutUser();
+                }}
+              >
+                <Link to='/login'>Logout</Link>
+                <AiOutlineRight className='side-arrow'></AiOutlineRight>
+              </li>
+            )}
+
             <li className='side-link'>
               <Link to='/cart'>Cart</Link>
               <AiOutlineRight className='side-arrow'></AiOutlineRight>
