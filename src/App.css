@@ -98,7 +98,8 @@ a {
 /* ::::::::::::::::::: Error :::::::::::::::::::::: */
 .error-sect {
   min-height: 70vh;
-  background: red;
+  background: var(--BgColor);
+  position: relative;
 }
 .error-center {
   width: 100%;
@@ -106,9 +107,12 @@ a {
 }
 .error-container {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: var(--CtaFonts);
+  letter-spacing: 1.3px;
+  text-align: center;
 }
 /* End Error */
 /* Desktop Nav*/
@@ -120,7 +124,10 @@ a {
   height: 4rem;
   background: var(--GrayColor);
   box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.474);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 /*  -----------> Mobile <----------- */
 /* Header */
